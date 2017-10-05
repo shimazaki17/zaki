@@ -19,13 +19,13 @@
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="post" action="bookinsert.php">
+<form method="post" action="book_insert.php">
   <div class="jumbotron">
    <fieldset>
     <legend>ブックマーク</legend>
-     <label>書籍名：<input type="text" name="name"></label><br>
+     <label>書籍名：<input type="text" name="book_name"></label><br>
      <label>URL：<input type="text" name="url"></label><br>
-     <label>感想：<textArea name="naiyou" rows="4" cols="40"></textArea></label><br>
+     <label>感想：<textArea name="comments" rows="4" cols="40"></textArea></label><br>
      <input type="submit" value="送信">
     </fieldset>
   </div>

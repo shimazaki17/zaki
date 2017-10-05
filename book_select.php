@@ -13,16 +13,19 @@ $status = $stmt->execute();
 
 //3．
 $view = "";
-
 if($status==false){
   $error = $stmt->errorInfo();
   exit("QueryError:".$error[2]);
-  
 }else{
-  while($r = $stmt->fetch(PDO::FETCH_ASSOC)){
-      $view .= "<p>";
-      $view .= $r["indate"]."　".$r["name"];
-      $view .= "</p>";
+  while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+      $view .= '<p>';
+      $view .= '<a href="book_detail.php?id='. $result["id"].'">';
+      $view .= $result["book_name"];
+      $view .= '</a>';
+      $view .= '<a href="book_delete.php?id='. $result["id"].'">';
+      $view .='[削除]';
+      $view .= '</a>';
+      $view .= '</p>';
   }
 }
 ?>
